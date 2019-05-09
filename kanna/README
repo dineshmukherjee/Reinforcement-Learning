@@ -1,0 +1,26 @@
+Code for Reinforcement learning task:
+#####################################
+-- First I have built a synthetic world, with controllable parameters (length, width) 
+  as well as the statistical probability of generating a treasue, a pirate or an obstacle.
+  This object is called grid(It is imprecise but I kept it that way...).
+  The "player" moves from left to right and can not pass through obstacles
+-- Grid Search Experiment shows how deeper grid search outbeats less deep searches, 
+  because the algo. naturally finds better paths.
+-- MultiArmed bandit: epsilon greedy strategy for 3 policies:  
+  the player runs along resp. the first, second, third rows when he can 
+  (random jump in case of obstacle).
+  To make sense, the synthetic world needs assymetry and the zero's row 
+  has significantly more treasures.
+-- QLearning: Here, for an asymmetric world as above, we run basic QLearning strategies.
+   They are based on a Q matrix states * action where the expected scores are first mocked,
+   then iteratively evaluated.
+   The policy simply choose the action with the best expected returns.
+   Here also, I let the code not perfectly coherent with notations, etc...
+
+Run the code:
+#############
+install python, with matplotlib and numpy
+
+python ***.py
+
+Alternatively, you can run the notebooks, which have figures.
